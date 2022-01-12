@@ -19,7 +19,7 @@ jobs:
           command: "echo Hello, World!"
   
   build-artificats:
-    working_directory:/tmp
+    working_directory: /tmp
     steps:
       -run:
           name: "creating dummy artifacts"
@@ -40,4 +40,4 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - build-artifact
+      - build-artifacts
