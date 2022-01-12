@@ -23,10 +23,11 @@ jobs:
     steps:
       -run:
           name: "creating dummy artifacts"
-          command:|
+          command: |
             echo "my artifact file" > /tmp/art-1;
             mkdir /tmp/artificats;
             echo "my artifact file in a directory" > /tmp/artificats/art-2;
+            
       - store_artificats:
           path: /tmp/art-1
           destination: artifact-file
